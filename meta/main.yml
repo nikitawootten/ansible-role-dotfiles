@@ -28,5 +28,11 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - all
+    - name: ArchLinux
+      versions:
+        - all
+    - name: MacOSX
+      versions:
+        - all
 # Can be called many times from different roles
 allow_duplicates: true

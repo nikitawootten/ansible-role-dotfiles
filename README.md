@@ -2,13 +2,13 @@
 
 An Ansible role that mimics [GNU Stow](https://www.gnu.org/software/stow/), allowing for easy dotfiles management.
 
+For an example of this role in action, see my dotfiles: https://github.com/nikitawootten/.dotfiles and [accompanying blog post](https://nikita.computer/posts/dotfiles/).
+
 ## Requirements
 
-This role acts as a symlink farm.
-Ensure that the target filesystem supports symlinks.
-Additionally, this role is meant only for local provisioning.
+This role acts as a symlink farm. Ensure that the target filesystem supports symlinks. Additionally, this role is meant only for local provisioning.
 
-This module is confirmed working on MacOS and Linux, but it has not been tested on Windows (please PR me if you do!).
+This role is confirmed working on MacOS and Linux, but it has not been tested on Windows (please PR me if you do!).
 
 ## Role Variables
 
@@ -21,8 +21,11 @@ This module is confirmed working on MacOS and Linux, but it has not been tested 
   This defaults to the user's home directory.
 
 - `dotfiles_mode`: If specified, this will set the permissions on linked files and created directories.
+
 - `dotfiles_owner`: If specified, this will set the user on all linked files and intermediate directories.
+
 - `dotfiles_group`: If specified, this will set the group on all linked files and intermediate directories.
+
 - `dotfiles_become`: If set to true, all file operations will be run as root.
 
   **WARNING: Symlinks from unprivileged locations to privileged locations can introduce vulnerabilities into your environment. Proceed with caution**
@@ -31,7 +34,7 @@ For more details, see [`argument_specs.yaml`](./meta/argument_specs.yaml).
 
 ## Dependencies
 
-None
+None.
 
 ## Example Playbook
 

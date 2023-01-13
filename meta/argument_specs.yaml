@@ -1,0 +1,38 @@
+---
+argument_specs:
+  main:
+    short_description: This role creates directories and symlinks files found in dotfiles_src to dotfiles_dest
+    options:
+      dotfiles_src:
+        type: str
+        required: false
+        default: "files"
+        description: |
+          The source folder (relative to the calling role/play) that files will be symlinked from
+      dotfiles_dest:
+        type: str
+        required: false
+        default: "~"
+        description: The destination folder to put symlinks
+      dotfiles_mode:
+        type: str
+        required: false
+        description: |
+          The permissions that the resulting symlinks and created directories should have.
+          When not specified, the default for ansible.builtin.file will be used (usually the umask)
+      dotfiles_owner:
+        type: str
+        required: false
+        description: |
+          The name of the user that should own the resulting links.
+          When not specified, the default for ansible.builtin.file will be used (the current user)
+      dotfiles_group:
+        type: str
+        required: false
+        description: |
+          The name of the group that should own the resulting links
+          When not specified, the default for ansible.builtin.file will be used (the current group of the current user)
+      dotfiles_become:
+        type: bool
+        required: false
+        description: Activate privilege escalation for file operations

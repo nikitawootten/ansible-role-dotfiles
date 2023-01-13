@@ -1,0 +1,32 @@
+galaxy_info:
+  author: nikitawootten
+  description: An Ansible role that mimics GNU Stow, allowing for easy dotfiles management.
+  role_name: dotfiles
+  standalone: true
+  issue_tracker_url: https://github.com/nikitawootten/ansible-role-dotfiles/issues
+  license: MIT
+  min_ansible_version: "2.1"
+  galaxy_tags:
+    - dotfiles
+    - linux
+    - macos
+    - filesystem
+  platforms:
+    # Should pretty much work on all POSIX-y machines
+    - name: EL
+      versions:
+        - all
+    - name: Fedora
+      versions:
+        - all
+    - name: Amazon
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+# Can be called many times from different roles
+allow_duplicates: true

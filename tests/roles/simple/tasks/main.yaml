@@ -1,0 +1,9 @@
+- name: Simple case
+  ansible.builtin.include_role:
+    name: nikitawootten.dotfiles
+- name: Test simple case
+  ansible.builtin.assert:
+    that:
+      - "'{{ dotfiles_dest }}/test.txt' is link"
+      - "'{{ dotfiles_dest }}/nested' is directory"
+      - "'{{ dotfiles_dest }}/nested/nested_test.txt' is link"
